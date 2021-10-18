@@ -1,5 +1,5 @@
 #Caution!!! This script disables the Windows Update Services.
-#It is intended for the use in isolated lab environments for space saving purposes only.
+#It is intended for use in isolated lab environments for space saving purposes only.
 #If you do not have space constraints, comment-out five lines before the last one and save the script!!! 
 Get-ScheduledTask -TaskName ServerManager | Disable-ScheduledTask -Verbose
 Rename-Computer -NewName SmartConsole
