@@ -129,7 +129,7 @@ Publish changes and install the policy.
 After successful policy installation, In **GATEWAYS & SERVERS**, your cluster members change status from red ***X** to green checkmark **after a few minutes**:
  
 
-Then, change the **Rule 19** by adding SmartConsole_VM to the Source field, deleting ExternalZone from Destination field and replacing it with Check Point Services updatable object to match what is depicted in ***Figure 11.10***:
+Then, change the **Rule 19** by adding **SmartConsole_VM** to the **Source** field, deleting **ExternalZone** from **Destination** field and replacing it with **Check Point Services** updatable object to match what is depicted in ***Figure 11.10***:
 
  IMAGE
 
@@ -141,23 +141,23 @@ This is immaterial- the icon will be updated automatically in time as Check Poin
 Continue working on the rest of the policy.
 
  ### Page 449
-Latest releases of web browsers updated the certificate handling interface. Now, instead of the legacy Certificate popup (left), you will see a newer one (right):
+Latest releases of web browsers updated the certificate handling interface. Now, instead of the legacy **Certificate** popup (left), you will see a newer one (right):
 
 IMAGE 	 
 
 ### Pages 451-452
 
-Similarly, for actions depicted in the paragraph above and in Figure 11.31 - Preparing the management server’s certificate for distribution, certificate interface is changed and now, in Certificate Viewer [1], Click on Details [2], In Certificate Hierarchy section, select top-most line [3] and click Export [4]:
+Similarly, for actions depicted in the paragraph above and in Figure 11.31 - Preparing the management server’s certificate for distribution, certificate interface is changed and now, in **Certificate Viewer** [1], Click on **Details** [2], In **Certificate Hierarchy** section, select top-most line [3] and click **Export** [4]:
  
  IMAGE
  
-1.	In Certificate Export Wizard, navigate to LabShare.
-In File name, type in cpsms.mycp.lab, change the Save as type setting to DER Encoded Binary, single certificate, and click on Save. Close the browser’s Certificate Viewer.
-2.	Now, open LabShare and repeat the installation of this certificate for Local Machine in the Trusted Root Certification Authorities location, which is the same as the one we have used for the outbound CA we imported earlier.
-3.	Close our Incognito window browser instance and open a new Incognito window browser instance, navigate to another social networking site (for instance, Instagram), and you should be greeted with UserCheck’s Page Blocked notification but no more security warnings. To verify that our HTTPS bypass rules are working, visit one of the banking sites, such as www.citi.com or www.jpmorgan.com, and check the certificates’ properties for them. You will see that they present their own certificates and not the mycp.lab certificate used for the inspected traffic.
-4.	Repeat the installation of both certificates on the rest of the Windows VMs in the lab.
-5.	After both certificates are successfully installed, if you have running browser instances, close those and re-launch for new certs to take effect.
-Continue to Changing the website categorization to Hold mode section
+ 1.	In **Certificate Export Wizard**, navigate to ***LabShare***.
+ In File name, type in cpsms.mycp.lab, change the Save as type setting to DER Encoded Binary, single certificate, and click on Save. Close the browser’s Certificate Viewer.
+ 2.	Now, open LabShare and repeat the installation of this certificate for Local Machine in the Trusted Root Certification Authorities location, which is the same as the one we have used for the outbound CA we imported earlier.
+ 3.	Close our Incognito window browser instance and open a new Incognito window browser instance, navigate to another social networking site (for instance, Instagram), and you should be greeted with UserCheck’s Page Blocked notification but no more security warnings. To verify that our HTTPS bypass rules are working, visit one of the banking sites, such as www.citi.com or www.jpmorgan.com, and check the certificates’ properties for them. You will see that they present their own certificates and not the mycp.lab certificate used for the inspected traffic.
+ 4.	Repeat the installation of both certificates on the rest of the Windows VMs in the lab.
+ 5.	After both certificates are successfully installed, if you have running browser instances, close those and re-launch for new certs to take effect.
+ Continue to Changing the website categorization to Hold mode section
 
 ### Page 454
 
@@ -169,7 +169,7 @@ Continue to Changing the website categorization to Hold mode section
 After completing the instructions in the first sentence at the top of the page:
 _Click on OK three times to exit Gateway Cluster Properties._
 Do this:
-Publish changes, Install Policy, close and reopen SmartConsole application before continuing.
+Publish changes, Install Policy, close and reopen **SmartConsole** application before continuing.
 
 ### Page 461
 
@@ -197,9 +197,10 @@ _Execute `ping 200.200.0.254`…_
 
 ### Page 469
 
-In ***Step 4***, DO NOT click on Communication button (***label 4***). 
+In ***Step 4***, DO NOT click on **Communication** button (***label 4***). 
 Note:
-Until our **CPCXL** cluster is aware that **CPGW** is a Check Point gateway, communication between our management server and **CPGW** will not be permitted by the preexisting Implied Rules.
+Until our **CPCXL** cluster is aware that **CPGW** is a Check Point gateway, communication between our management server and **CPGW** will not be permitted by the preexisting **Implied Rules**.
+
 Instead:
 
 With **Gateway’s Name** [1] and **IPv4 Address** [2] defined and with **Secure Internal Communication Unitialized** [3], click **OK** [4]:
@@ -227,7 +228,7 @@ With **Gateway’s Name** [1] and **IPv4 Address** [2] defined and with **Secure
 
 IMAGE
 
-Figure – 12.12 The modified rules for site-to-site VPN access from the remote side
+***Figure – 12.12 The modified rules for site-to-site VPN access from the remote side***
 
 >**NOTE**
 
@@ -269,13 +270,13 @@ After you’ve added the two NAT rules, publish changes, and install the **LeftS
 
 1.	Disregard ***Step7*** and ***Step 8***. There are no rules configured in our policy to allow this traffic.
 2.	In ***Excluding a satellite gateway’s external IP from the VPN*** section, the paragraph:
-Try the following exercise: SSH into **CPGW** and ping our router’s IP, `200.200.0.254`. In the SmartConsole logs, use the `src:200.200.0.1 AND service:icmp-proto` filter, and you will see the encrypted [1] and decrypted [2] traffic from CPGW traversing CPCXL member CPCM1. and the ***Figure 12.16*** 
+Try the following exercise: SSH into **CPGW** and ping our router’s IP, `200.200.0.254`. In the SmartConsole logs, use the `src:200.200.0.1 AND service:icmp-proto` filter, and you will see the encrypted [1] and decrypted [2] traffic from **CPGW** traversing **CPCXL** member **CPCM1**, and the ***Figure 12.16*** 
  
 ***Figure 12.16 – Unexpected encrypted traffic***
 
 Should be:
-To demonstrate, let’s enable Accept ICMP requests and enable Log Implied Rules option in the Main Menu|Global Properties. This process is described later, on Page 493 in Step 1 (Figure 12.26 - Global Properties, FireWall for ICMP, and implied rules tracking) publish changes and install the policy LeftSide_S2S. 
-Now, try the following exercise: SSH into CPGW from SmartConsole_VM and from it, ping our router’s IP, 200.200.0.254. In the SmartConsole logs, use the src:200.200.0.1 AND service:icmp-proto filter, and you will see the decrypted [1] traffic from CPGW [2] traversing CPCXL member CPCM1 [3], with the echo-reply being dropped [4] by CPGW [5]:
+To demonstrate, let’s enable **Accept ICMP requests** and enable **Log Implied Rules** option in the **Main Menu|Global Properties**. This process is described later, on **Page 493** in ***Step 1*** (***Figure 12.26 - Global Properties, FireWall for ICMP, and implied rules tracking***) publish changes and install the policy **LeftSide_S2S**. 
+Now, try the following exercise: SSH into **CPGW** from **SmartConsole_VM** and from it, ping our router’s IP, `200.200.0.254`. In the SmartConsole logs, use the `src:200.200.0.1 AND service:icmp-proto` filter, and you will see the decrypted [1] traffic from **CPGW** [2] traversing **CPCXL** member **CPCM1** [3], with the echo-reply being dropped [4] by **CPGW** [5]:
  
 ***Figure 12.16 – Unexpected encrypted traffic***
 
@@ -283,21 +284,28 @@ Now, try the following exercise: SSH into CPGW from SmartConsole_VM and from it,
 
 Last paragraph of the section:
 _Note that we did not remove 200.200.0.1 from the encryption domain of CPGW but simply restricted traffic sourced from it from being encrypted._
+
 Should be:
+
 _Note that traffic sourced from 200.200.0.1 is now excluded from the VPN and is not routed over the tunnel, using the Gaia routing instead._
 
-Page 489:
+### Page 489
+
 The last paragraph before Configuring a Gateway or cluster for remote access section, that reads:
 _Let’s create a new network object, **Net_192.168.254.0**, with a `192.168.254.0`_
 address and a `255.255.255.0` mask.
+
 Should be:
+
 _Let’s create a new network object, **Net_192.168.254.0**, with a `192.168.254.0`
-address and a `255.255.255.0` mask. Set it’s NAT properties to Hide behind gateway and Install on gateway: CPCXL. Add this network object to the **Int_Nets** group.
+address and a `255.255.255.0` mask. Set it’s NAT properties to Hide behind gateway and Install on gateway: **CPCXL**. Add this network object to the **Int_Nets** group.
 
 ### Page 497
 
 Configuring access control policy rules for remote access
+
 **Step 1** should be:
+
 1.	Add **Net_192.168.254.0** to:
   A.	***Rule 4 (DHCP relays and to clients Accept) Destination field.***
   B.	***Rule 5 (DHCP replies to clients Accept) Destination field.***
@@ -306,12 +314,13 @@ Configuring access control policy rules for remote access
 ### Page 499
 
 ***Step 1***
+
 _Rename the newly pasted rule and replace the **Int_Nets** object in the **Source** field with the **RA_Role** access role (both the original and new rules are shown) [1]:_
 
 Should be:
 
 _Rename the newly pasted rule and replace the *Any in the Source field with the RA_Role access role (both the original and new rules are shown) [1].
-Figure 12.33 should look like this:_
+***Figure 12.33*** should look like this:_
  
 ***Figure 12.33 – The application control layer rules created or modified for the lab***
 
@@ -338,19 +347,25 @@ This is normal, as **Check Point Endpoint Security** client is performing revers
 
 
 ### Page 504
-***Step 15*** – **RA_user1** username should be **Ra_user1**, it is case-sensitive. Same goes for the ***Figure 12.40 – The Endpoint Security authentication and connection prompt*** on **Page 505***.
+***Step 15*** 
+
+**RA_user1** username should be **Ra_user1**, it is case-sensitive. Same goes for the ***Figure 12.40 – The Endpoint Security authentication and connection prompt*** on **Page 505***.
 
 ### Page 510
 
 Section title typo:
+
 ***Logging into a single security domain***
+
 Should be:
+
 ***Logging in a single security domain.***
 
 ## Chapter 13 – Introduction to Logging and SmartEvent
-Page 526:
-Note:
-In Step 4- either wait for a few minutes before opening New Tab or close and re-open SmartConsole to see the SmartEvent Settings & Policy under External Apps.
+
+### Page 526
+>**Note**
+> In ***Step 4***, either wait for a few minutes before opening **New Tab** or close and re-open **SmartConsole** to see the **SmartEvent Settings & Policy** under **External Apps**.
 
 ### Page 530
 
