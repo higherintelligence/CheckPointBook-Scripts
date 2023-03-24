@@ -40,10 +40,15 @@ The `admin hash=’<value>’`  has a leading space after single quote, it shoul
 ***Figure 5.35*** shows default route before it was configured on **CPCM1**. It was configured by **FTW** on **CPCM2** only. 
 On **CPCM1**, you will see the following in **IPv4 Static Routes** [1]. Click on **Default** [2] and, when it is selected, click on **Edit** [3]:
 
+![Figure EN_C5_01 Editing automatically created Default Route](https://github.com/higherintelligence/CheckPointBook-Scripts/blob/main/Errata_Figures/E1_C5_Default_Route_1.png)
  
 In **Edit Destination Route: Default** popup window [1]. Click on **Add Gateway** [2] and click on **IP Address** [3]:
+
+![Figure EN_C5_02 Editing automatically created Default Route](https://github.com/higherintelligence/CheckPointBook-Scripts/blob/main/Errata_Figures/E1_C5_Default_Route_2.png)
  
 In **Add IP Address Gateway** child popup window [1] **IPv4 Address**, enter `200.100.0.254` [2] and click **OK** [3]:
+
+![Figure EN_C5_03 Editing automatically created Default Route](https://github.com/higherintelligence/CheckPointBook-Scripts/blob/main/Errata_Figures/E1_C5_Default_Route_3.png)
  
 Click **Save** in the parent popup window to close it. Only now do you see the **Default route** as shown in ***Figure 5.35***.
 
