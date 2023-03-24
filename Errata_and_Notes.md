@@ -9,17 +9,17 @@ Tremendows thanks to Tim Hall, who has pointed out some of the pertinent additio
 ## Chapter 1 - Introduction to Check Point Firewalls and Threat Prevention Products
  ### Page 13
 
-  **Note:**
+  >**Note**
 
-  _One effect of a SMS being down for a long time is that CRL retrieval can fail after the cache expires in a week, which will break certificate-based VPNs and various other certificate-based operations._
+  >One effect of a SMS being down for a long time is that CRL retrieval can fail after the cache expires in a week, which will break certificate-based VPNs and various other certificate-based operations.
 
 ## Chapter 3 – Building a Check Point Lab Environment – Part 1
 ## Chapter 4 – Building a Check Point Lab Environment – Part 2
 ### Page 67 to Page 147
 
- **Note:**
+ >**Note**
 
- _Chapters 3 and 4 are now replaced by the updated Check Point Lab Rapid Deployment Guide in this book’s GitHub repository. The guide referencing updated scripts in book’s GitHub repository and is available at:
+ >_Chapters 3 and 4 are now replaced by the updated Check Point Lab Rapid Deployment Guide in this book’s GitHub repository. The guide referencing updated scripts in book’s GitHub repository and is available at:
  https://github.com/PacktPublishing/Check-Point-Firewall-Administration-R81.10-/blob/main/Check%20Point%20Lab%20Rapid%20Deployment%20Guide.pdf
  This is done to address inaccuracies in the way the scripts were depicted in the book, changes introduced in VirtualBox v. 7.0.X and to speed-up and simplify the lab deployment process._
 
@@ -91,15 +91,15 @@ Tremendows thanks to Tim Hall, who has pointed out some of the pertinent additio
 
  ### Page 382
 
- **Note:**
+ >**Note**
 
- _The **Protections** options configuration for hosts is now deprecated, but still available. Do not use these options. Instead, use **Protected Scope** option in **Threat Prevention Policy**. We do not use either options in the book. This is for information only._
+ >The **Protections** options configuration for hosts is now deprecated, but still available. Do not use these options. Instead, use **Protected Scope** option in **Threat Prevention Policy**. We do not use either options in the book. This is for information only.
 
 ### Page 398
 
- **Note:**
+ >**Note**
 
- _Two NAT rules can be matched for the same connection only if both are automatically-generated, whereas if a single manual NAT rule is matched no others can be._
+ >Two NAT rules can be matched for the same connection only if both are automatically-generated, whereas if a single manual NAT rule is matched no others can be.
 
 ## Chapter 11 - Building Your First Policy
 
@@ -161,8 +161,8 @@ Continue to Changing the website categorization to Hold mode section
 
 ### Page 454
 
-**Note:**
-_Instead of typing the commands by hand, if you are using physical book, from **ADDCDNS** **CMD** prompt, execute `F:\Scripts\add-ad_users.bat script`. This will prompt you three times for each of three user’s passwords. Enter `CPL@b8110` to keep it consistent._
+>**Note**
+>Instead of typing the commands by hand, if you are using physical book, from **ADDCDNS** **CMD** prompt, execute `F:\Scripts\add-ad_users.bat script`. This will prompt you three times for each of three user’s passwords. Enter `CPL@b8110` to keep it consistent.
 
 ### Page 459
 
@@ -229,9 +229,9 @@ IMAGE
 
 Figure – 12.12 The modified rules for site-to-site VPN access from the remote side
 
-**NOTE:**
+>**NOTE**
 
-_You can further restrict rules applicable to VPN traffic by selecting specific VPN community in VPN column. Doing this will require creating additional rules for the sources and destinations that are on the other side of the VPN._
+>_You can further restrict rules applicable to VPN traffic by selecting specific VPN community in VPN column. Doing this will require creating additional rules for the sources and destinations that are on the other side of the VPN._
 
 In ***Step 3**
 
@@ -242,22 +242,18 @@ Should be:
 
 On **RightHost**, change the DNS settings by replacing `9.9.9.9` with `10.20.20.10` (**ADDCDNS**) as your primary DNS server.
 
-**Note:**
+>**Note**
 
-_Windows using ONLY primary DNS server, so long as it is responding, even if it cannot resolve the host name._
+>Windows using ONLY primary DNS server, so long as it is responding, even if it cannot resolve the host name.
 
-**Note:**
+>**Note**
 
-_It is also a good idea at this point to replace the domain-udp object_ 
- 
-in our **LeftSide_S2S** policy with dns **Service Group** object
- 
-This allows both, **UDP** and **TCP** for DNS to accommodate responses larger than 512 bytes.
+>It is also a good idea at this point to replace the **domain-udp** object in our **LeftSide_S2S** policy with dns **Service Group** object. This allows both, **UDP** and **TCP** for DNS to accommodate responses larger than 512 bytes.
 
 In ***Step 4***
 
-**Note:**
-_You are instructed to initiate the RDP or HTTP traffic to any of the hosts on the Left Side (e.g., HTTP or RDP to DMZSRV.mycp.lab). While HTTP will succeed, RDP will fail, since we do not have RDP configured on DMZSRV yet. This is beside the point since all we are interested in, is generating traffic. Even unsuccessful RDP attempt will be logged as encrypted and decrypted:_
+>**Note**
+>You are instructed to initiate the RDP or HTTP traffic to any of the hosts on the Left Side (e.g., HTTP or RDP to DMZSRV.mycp.lab). While HTTP will succeed, RDP will fail, since we do not have RDP configured on DMZSRV yet. This is beside the point since all we are interested in, is generating traffic. Even unsuccessful RDP attempt will be logged as encrypted and decrypted:
  
 IMAGE
 
@@ -401,9 +397,9 @@ Click anywhere within that VM’s console and press any key within firs five sec
 In Boot options selector , using arrow keys [5] select Start in 64bit online debug mode [6]:
  
 …and if the cloned VM boots normally with verbose boot debug output:
-A.	Shut this VM down and, in Oracle VM VirtualBox Manager
-B.	VM’s Settings, uncheck the “Enable Serial Port” checkbox and click OK.
-C.	Boot VM normally ignoring these warnings:
+ A.	Shut this VM down and, in Oracle VM VirtualBox Manager
+ B.	VM’s Settings, uncheck the “Enable Serial Port” checkbox and click OK.
+ C.	Boot VM normally ignoring these warnings:
  
 D.	Repeat the same action for all your Check Point VMs.
 This was observed on AMD LabHost running VirtualBox 7 with CheckPoint R81.10 after completion of the First Time Configuration Wizard.
