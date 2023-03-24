@@ -126,14 +126,14 @@ Later, when the policy is installed, revisit Gaia WebUI of the **CPSMS** and **C
  IMAGE
  
 Publish changes and install the policy.
-After successful policy installation, In **GATEWAYS & SERVERS**, your cluster members change status from red ***X** to green checkmark:
+After successful policy installation, In **GATEWAYS & SERVERS**, your cluster members change status from red ***X** to green checkmark **after a few minutes**:
  
 
 Then, change the **Rule 19** by adding SmartConsole_VM to the Source field, deleting ExternalZone from Destination field and replacing it with Check Point Services updatable object to match what is depicted in ***Figure 11.10***:
 
  IMAGE
 
-One thing to note is that not all ***Updatable Objects*** may have associated icons at this point, so you may see the rule looking like this:
+One thing to note is that not all ***Updatable Objects*** may have associated icons at this point (they are in the process of being downloaded), so you may see the rule looking like this:
 
 IMAGE
 
